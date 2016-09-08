@@ -41,3 +41,9 @@ ver la version de debian **lsb_release -a**
     * magic_quotes_gpc = Off
     * magic_quotes_runtime = Off
     * date.timezone = 'America/Guatemala'
+
+
+### Referencias
+* [chamilo guia de instalación](http://www.laboiteatice.fr/chamilo/documentation/installation_guide_es_ES.html)
+* [markdown sintaxis](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+* [respositorio chamilo](https://github.com/chamilo/chamilo-lms/tree/1.10.x)
