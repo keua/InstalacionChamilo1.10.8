@@ -9,11 +9,10 @@ ver la version de debian **lsb_release -a**
 2. Descargar chamilo 1.10.8 desde pagina oficial [Descargar](https://chamilo.org/es/chamilo-lms/#descargas)
 3. Descomprimir chamilo en la carpeta **/var/www/html**
 4. Agregar al archivo **/etc/apache2/apache2.conf** las siguientes lineas
-    * ```
-        <Directory /var/www/html/chamilo-lms-1.10.8>
-                RewriteEngine On
-                RewriteCond %{QUERY_STRING} ^id=(.*)$
-                RewriteRule ^([^/.]+)/?$ user.php?$1 [L]
+    * ``` <Directory /var/www/html/chamilo-lms-1.10.8> ```
+    * ```       RewriteEngine On ```
+    * ```       RewriteCond %{QUERY_STRING} ^id=(.*)$ ```
+    * ```       RewriteRule ^([^/.]+)/?$ user.php?$1 [L] ```
                 RewriteRule ^certificates/$ certificates/index.php?id=%1 [L]
                 RewriteRule ^courses/([^/]+)/$ app/course_home/course_home.php?cDir=$1 $
                 RewriteRule ^courses/([^/]+)/index.php$ main/course_home/course_home.ph$
@@ -24,8 +23,7 @@ ver la version de debian **lsb_release -a**
                 RewriteRule ^courses/([^/]+)/course-pic.png$ app/courses/$1/course-pic.$
                 RewriteRule ^session/(\d{1,})/about/?$ main/session/about.php?session_i$
                 RewriteRule ^badge/(\d{1,})/user/(\d{1,}) main/badge/issued.php?skill=$1&us$
-        </Directory> 
-      ```
+    * ``` </Directory> ```
 5. Dar los permisos de lectura, escritura y ejecución a las siguientes carpetas **remplace [chamilo] por el directorio en el cual está ubicado su Chamilo**.
     * [chamilo]/app/
     * [chamilo]/vendor/ (solo en lectura y ejecución)
