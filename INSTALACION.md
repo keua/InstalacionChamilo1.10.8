@@ -13,16 +13,16 @@ ver la version de debian **lsb_release -a**
     * ```       RewriteEngine On ```
     * ```       RewriteCond %{QUERY_STRING} ^id=(.*)$ ```
     * ```       RewriteRule ^([^/.]+)/?$ user.php?$1 [L] ```
-                RewriteRule ^certificates/$ certificates/index.php?id=%1 [L]
-                RewriteRule ^courses/([^/]+)/$ app/course_home/course_home.php?cDir=$1 $
-                RewriteRule ^courses/([^/]+)/index.php$ main/course_home/course_home.ph$
-                RewriteRule ^courses/([^/]+)/document/(.*)$ main/document/download.php?$
-                RewriteRule ^courses/([^/]+)/work/(.*)$ main/work/download.php?file=wor$
-                RewriteRule ^courses/([^/]+)/upload/(.*)$ main/courses/$1/upload/$2 [QS$
-                RewriteRule ^courses/([^/]+)/course-pic85x85.png$ main/courses/$1/cours$
-                RewriteRule ^courses/([^/]+)/course-pic.png$ app/courses/$1/course-pic.$
-                RewriteRule ^session/(\d{1,})/about/?$ main/session/about.php?session_i$
-                RewriteRule ^badge/(\d{1,})/user/(\d{1,}) main/badge/issued.php?skill=$1&us$
+    * ```       RewriteRule ^certificates/$ certificates/index.php?id=%1 [L] ```
+    * ```       RewriteRule ^courses/([^/]+)/$ app/course_home/course_home.php?cDir=$1 $ ```
+    * ```       RewriteRule ^courses/([^/]+)/index.php$ main/course_home/course_home.ph$ ```
+    * ```       RewriteRule ^courses/([^/]+)/document/(.*)$ main/document/download.php?$ ```
+    * ```       RewriteRule ^courses/([^/]+)/work/(.*)$ main/work/download.php?file=wor$ ```
+    * ```       RewriteRule ^courses/([^/]+)/upload/(.*)$ main/courses/$1/upload/$2 [QS$ ```
+    * ```       RewriteRule ^courses/([^/]+)/course-pic85x85.png$ main/courses/$1/cours$ ```
+    * ```       RewriteRule ^courses/([^/]+)/course-pic.png$ app/courses/$1/course-pic.$ ```
+    * ```       RewriteRule ^session/(\d{1,})/about/?$ main/session/about.php?session_i$ ```
+    * ```       RewriteRule ^badge/(\d{1,})/user/(\d{1,}) main/badge/issued.php?skill=$1&us$ ```
     * ``` </Directory> ```
 5. Dar los permisos de lectura, escritura y ejecución a las siguientes carpetas **remplace [chamilo] por el directorio en el cual está ubicado su Chamilo**.
     * [chamilo]/app/
